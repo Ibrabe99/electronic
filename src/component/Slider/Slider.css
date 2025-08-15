@@ -1,0 +1,366 @@
+/* Slider Container */
+.slider {
+  background-color: var(--primary-color);
+  min-height: 650px;
+  padding: 40px 0;
+}
+
+/* Header Section */
+.heads {
+  display: flex !important;
+  justify-content: space-between !important;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 30px;
+}
+
+.heads h2 {
+  font-size: clamp(28px, 4vw, 40px);
+  font-weight: 700;
+  color: var(--text-color-w);
+  margin: 0;
+}
+
+.heads a {
+  color: var(--text-color-w);
+  font-size: clamp(16px, 2vw, 18px);
+  font-weight: 700;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: opacity 0.3s ease;
+}
+
+.heads a:hover {
+  opacity: 0.8;
+}
+
+/* Cards Container */
+.Cards {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: center !important;
+  width: 100%;
+  padding: 0 10px;
+}
+
+/* Card Body */
+.CardBody {
+  width: 100%;
+  max-width: 320px;
+  min-height: 400px;
+  margin: 0 auto;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  background: white;
+  border: none;
+}
+
+.CardBody:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Card Image */
+.ImgCard {
+  width: 100%;
+  height: 220px;
+  object-fit: contain;
+  border-radius: 0;
+}
+
+/* Card Body Content */
+.CardBody .card-body {
+  padding: 20px;
+  text-align: center;
+}
+
+.CardBody .card-title {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 10px;
+  color: var(--text-color, #333);
+}
+
+.CardBody .card-text {
+  font-size: 14px;
+  color: var(--text-color-secondary, #666);
+  margin-bottom: 15px;
+  line-height: 1.5;
+}
+
+.CardBody .btn {
+  width: 100%;
+  padding: 10px;
+  font-weight: 600;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+}
+
+/* Slick Slider Customization */
+.slick-slide {
+  display: flex !important;
+  justify-content: center !important;
+  align-items: stretch !important;
+  padding: 0 15px;
+  box-sizing: border-box;
+}
+
+.slick-slide > div {
+  display: flex !important;
+  width: 100%;
+  height: 100%;
+}
+
+.slick-list {
+  margin: 0 -15px;
+}
+
+/* Navigation Arrows */
+.slick-prev,
+.slick-next {
+  z-index: 100;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.9) !important;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background: white !important;
+  transform: scale(1.1);
+}
+
+.slick-prev {
+  left: -25px;
+}
+
+.slick-next {
+  right: -25px;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  font-size: 20px;
+  color: var(--primary-color, #007bff) !important;
+  opacity: 1;
+}
+
+/* Dots */
+.slick-dots {
+  bottom: -50px;
+}
+
+.slick-dots li button:before {
+  font-size: 14px !important;
+  color: rgba(255, 255, 255, 0.5) !important;
+  opacity: 1 !important;
+  transition: all 0.3s ease;
+}
+
+.slick-dots li.slick-active button:before {
+  color: white !important;
+  transform: scale(1.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1400px) {
+  .slick-prev {
+      left: -20px;
+  }
+  
+  .slick-next {
+      right: -20px;
+  }
+}
+
+@media (max-width: 1200px) {
+  .slider {
+      min-height: 600px;
+      padding: 30px 0;
+  }
+  
+  .CardBody {
+      max-width: 300px;
+      min-height: 380px;
+  }
+  
+  .ImgCard {
+      height: 200px;
+  }
+  
+  .slick-prev {
+      left: -15px;
+  }
+  
+  .slick-next {
+      right: -15px;
+  }
+}
+
+@media (max-width: 992px) {
+  .heads {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 15px;
+      margin-bottom: 25px;
+  }
+  
+  .heads h2 {
+      font-size: 32px;
+  }
+  
+  .CardBody {
+      max-width: 280px;
+      min-height: 360px;
+  }
+  
+  .ImgCard {
+      height: 180px;
+  }
+}
+
+@media (max-width: 768px) {
+  .slider {
+      min-height: 550px;
+      padding: 25px 0;
+  }
+  
+  .heads {
+      text-align: center;
+      align-items: center;
+  }
+  
+  .heads h2 {
+      font-size: 28px;
+  }
+  
+  .CardBody {
+      max-width: 100%;
+      min-height: 350px;
+      margin: 0 10px;
+  }
+  
+  .ImgCard {
+      height: 200px;
+  }
+  
+  .slick-prev,
+  .slick-next {
+      width: 40px;
+      height: 40px;
+  }
+  
+  .slick-prev {
+      left: -10px;
+  }
+  
+  .slick-next {
+      right: -10px;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+      font-size: 18px;
+  }
+}
+
+@media (max-width: 576px) {
+  .slider {
+      min-height: 500px;
+      padding: 20px 0;
+  }
+  
+  .heads h2 {
+      font-size: 24px;
+  }
+  
+  .heads a {
+      font-size: 16px;
+  }
+  
+  .CardBody {
+      min-height: 320px;
+      margin: 0 5px;
+  }
+  
+  .ImgCard {
+      height: 160px;
+  }
+  
+  .CardBody .card-body {
+      padding: 15px;
+  }
+  
+  .CardBody .card-title {
+      font-size: 16px;
+  }
+  
+  .CardBody .card-text {
+      font-size: 13px;
+  }
+  
+  .slick-prev,
+  .slick-next {
+      width: 35px;
+      height: 35px;
+  }
+  
+  .slick-prev {
+      left: -5px;
+  }
+  
+  .slick-next {
+      right: -5px;
+  }
+  
+  .slick-prev:before,
+  .slick-next:before {
+      font-size: 16px;
+  }
+  
+  .slick-dots {
+      bottom: -40px;
+  }
+}
+
+@media (max-width: 480px) {
+  .Cards {
+      padding: 0 5px;
+  }
+  
+  .CardBody {
+      min-height: 300px;
+  }
+  
+  .ImgCard {
+      height: 140px;
+  }
+  
+  .CardBody .card-body {
+      padding: 12px;
+  }
+  
+  .slick-prev,
+  .slick-next {
+      display: none !important;
+  }
+}
+
+/* Enhanced hover effects */
+@media (hover: hover) {
+  .CardBody:hover .ImgCard {
+      transform: scale(1.05);
+      transition: transform 0.3s ease;
+  }
+  
+  .CardBody .ImgCard {
+      transition: transform 0.3s ease;
+  }
+}

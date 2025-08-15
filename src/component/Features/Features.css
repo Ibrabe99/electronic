@@ -1,0 +1,37 @@
+.features {
+    padding: 100px 0;
+    background-color: #f8f9fa;
+
+  }
+  
+  .features-box {
+    text-align: center;
+    padding: 50px 40px;
+    border-radius: 12px;
+    border: 1px solid #0D6EFD;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin-top: 10px;
+  }
+  
+  .features-box:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0,0,0,0.1);
+  }
+  
+  .features-icon {
+    font-size: 50px;
+    color: var(--primary-color);
+    margin-bottom: 20px;
+  }
+  
+  .features-text h3 {
+    font-size: 22px;
+    font-weight: 700;
+    margin-bottom: 10px;
+  }
+  
+  .features-text p {
+    font-size: 14px;
+    color: #555;
+  }
+  
